@@ -9,9 +9,5 @@ if __name__ == '__main__':
         debug=True
     )
 
-
-#Bash cmd to launch a serveo tunnel and keep it alive:
-#ssh -o ServerAliveInterval=60 -R vivabot.serveo.net:80:localhost:3000 serveo.net
-
 #Bash cmd to launch a ngrok tunnel
 #ngrok http 300

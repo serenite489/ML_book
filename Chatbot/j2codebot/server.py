@@ -1,7 +1,7 @@
 from flask import Flask, request
 from server_aux import verify_webhook, is_user_message, respond
 
-Callback_URL = "https://f31aa03b.ngrok.io/webhook"
+Callback_URL = "https://00d2fb4f.ngrok.io/webhook"
 
 FB_API_URL = 'https://graph.facebook.com/v2.6/me/messages'
 VERIFY_TOKEN = 'j2_bot'# <paste your verify token here>
@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 # route to listen and respond to Messenger
-#https://vivabot.serveo.net/webhook
+#https://00d2fb4f.ngrok.io/webhook
 @app.route("/webhook", methods=['GET','POST'])
 def listen():
     print("entering listen function")
@@ -35,14 +35,14 @@ def listen():
 
 
 # route to test that your flask app is running
-#https://vivabot.serveo.net/test
+#https://00d2fb4f.ngrok.io/test
 @app.route("/test")
 def test():
     return "Your messenger app is running"
 
 
 # route to check the feedback of a specific query:
-#https://vivabot.serveo.net/test_query?query=hello
+#https://00d2fb4f.ngrok.io/test_query?query=hello
 @app.route("/test_query")
 def test_query():
     sender_id = "admin"
